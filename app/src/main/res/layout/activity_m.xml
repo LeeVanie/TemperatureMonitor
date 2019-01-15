@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zz.temperaturemonitor.activity.MainActivity"
+    android:background="@color/ivory">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:background="@color/green">
+            
+            <com.zz.temperaturemonitor.view.TempCircleView
+                android:id="@+id/tempCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/meun"
+                android:layout_margin="15dp"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/temp_threashod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:text="报警值：37℃"
+                android:textColor="@color/red"
+                android:textSize="15sp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"/>
+            
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/graywhite"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/temp_max"/>
+            <TextView
+                android:id="@+id/temp_max"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="最高温度：39℃"
+                android:textColor="@color/red"
+                android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/battery"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="电量：75%"
+                android:textColor="@color/black_text"
+                android:textSize="17sp"/>
+        </LinearLayout>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/graywhite"/>
+        
+        <com.zz.temperaturemonitor.view.FoldLineView
+            android:id="@+id/fl_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="40dp"
+            app:axisScaleWidth="5dp"
+            app:axisWidth="1dp"
+            app:crossAxisColor="#F88D3D"
+            app:foldLineCircleColor="@android:color/white"
+            app:foldLineCircleRadius="1dp"
+            app:foldLineColor="#3396C574"
+            app:foldLineOuterColor="#8CBA68"
+            app:isDrawFoldLineCircle="true"
+            app:isFillMode="true"
+            app:verticalAxisColor="#F88D3D"  />
+        
+        <View
+            android:id="@+id/bottom_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/graywhite"/>
+        
+        <LinearLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:text="当前测试：默默"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/stop_test"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_back"
+                android:textColor="@color/white"
+                android:text="停止测试"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.zz.temperaturemonitor.view.CircleImageView
+        android:id="@+id/user_aventure"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/user_icon"/>
+    
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/ic_title"/>
+
+    <com.zz.temperaturemonitor.calendar.view.DataView
+        android:id="@+id/week"
+        android:layout_width="match_parent"
+        android:background="@color/color_ffffff"
+        android:layout_height="wrap_content">
+    </com.zz.temperaturemonitor.calendar.view.DataView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/graywhite"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:background="@color/white">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/temp_avar"/>
+        <TextView
+            android:id="@+id/temp_avar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="平均温度：39℃"
+            android:textColor="@color/pink"
+            android:textSize="17sp"/>
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="监控时长：5h36m"
+            android:textColor="@color/black_text"
+            android:textSize="17sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:background="@color/white">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/temp_max"/>
+        <TextView
+            android:id="@+id/temp_max"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="最高温度：39℃"
+            android:textColor="@color/red"
+            android:textSize="17sp"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/temp_min"/>
+        <TextView
+            android:id="@+id/temp_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="最低温度：39℃"
+            android:textColor="@color/qing"
+            android:textSize="17sp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/graywhite"/>
+
+    <com.zz.temperaturemonitor.view.FoldLineView
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="40dp"
+        app:axisScaleWidth="5dp"
+        app:axisWidth="1dp"
+        app:crossAxisColor="#F88D3D"
+        app:foldLineCircleColor="@android:color/white"
+        app:foldLineCircleRadius="1dp"
+        app:foldLineColor="#3396C574"
+        app:foldLineOuterColor="#8CBA68"
+        app:isDrawFoldLineCircle="true"
+        app:isFillMode="true"
+        app:verticalAxisColor="#F88D3D"  />
+
+</LinearLayout>
+    

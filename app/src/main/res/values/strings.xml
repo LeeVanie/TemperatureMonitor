@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">温度监控</string>
+    <string name="text_login">登录</string>
+    <string name="text_register">注册</string>
+</resources>
